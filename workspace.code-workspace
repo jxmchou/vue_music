@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "."
+	},
+	{
+		"path": "..\\..\\code\\vue_shop"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "vue_music"
+  }
+}
