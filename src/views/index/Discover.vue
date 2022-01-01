@@ -609,7 +609,7 @@ export default {
     }
   }
 }
-@media only screen and (max-width: 499px) {
+/* @media only screen and (max-width: 499px) {
   .el-carousel {
     display: none;
   }
@@ -669,5 +669,5 @@ export default {
       }
     }
   }
-}
+} */
 </style>

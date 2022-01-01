@@ -41,6 +41,7 @@ ol {
   line-height: 30px;
 }
 .el-card {
+  min-width: 1136px;
   min-height: 500px;
   padding-bottom: 100px;
 }
@@ -103,8 +104,8 @@ a {
   text-decoration: none;
   font-size: 13px;
 }
-@media only screen and (min-width: 500px) {
+/* @media only screen and (min-width: 5px) {
   .el-card {
     min-width: 1166px;
   }
-}
+} */
