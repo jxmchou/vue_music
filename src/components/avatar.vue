@@ -80,6 +80,10 @@ export default {
         }
         this.$store.commit('outLogin')
       }
+      if(value === '我的主页'){
+        this.$router.push('/home')
+        this.show = false
+      }
     },
     test1() {
       this.show = true

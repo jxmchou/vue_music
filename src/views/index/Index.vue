@@ -531,9 +531,7 @@ export default {
 }
 
 .el-aside {
-  // position: fixed;
-  // top: 60px;
-  // left: 0;
+  overflow: hidden;
   color: #333;
   border-right: solid 1px #e6e6e6;
   transition: all 0.3s;
@@ -547,9 +545,13 @@ export default {
 }
 @media only screen and (max-width: 499px) {
   .el-header {
+    padding: 0;
     justify-content: space-evenly;
     ul {
       li {
+        &:nth-child(1) {
+          display: none;
+        }
         &:nth-child(2) {
           display: none;
         }
@@ -561,6 +563,9 @@ export default {
     ol {
       li {
         display: none;
+        &:nth-child(3) {
+          display: block;
+        }
         &:nth-child(4) {
           display: block;
         }
@@ -568,10 +573,24 @@ export default {
     }
   }
   .el-aside {
-    display: none;
+    width: 40px !important;
+    .el-menu{
+      .el-menu-item{
+        span{
+          display: none;
+        }
+        i{
+          margin: 0;
+          margin-left: -13px;
+        }
+      }
+    }
+  }
+  .el-main{
+    padding-left: 0px;
   }
 }
-@media only screen and (min-width: 500px) and (max-width: 760px) {
+@media only screen and (min-width: 500px) and (max-width: 870px) {
   .el-header {
     justify-content: space-evenly;
     ul {
@@ -602,7 +621,7 @@ export default {
     display: none;
   }
 }
-@media only screen and (min-width: 761px) and (max-width: 1250px) {
+@media only screen and (min-width: 871px) and (max-width: 1250px) {
   .el-header {
     justify-content: space-evenly;
     ul {

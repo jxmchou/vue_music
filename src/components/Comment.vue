@@ -47,8 +47,11 @@ export default {
       }
       if (this.textarea.trim()) {
         let { type, Id, textarea } = this
-        await sendComment(1, type, Id, textarea)
+        let { data: res } = await sendComment(1, type, Id, textarea)
         this.textarea = ''
+        if (res.code !== 200) {
+          this.$message.error('评论接口失败')
+        }
       } else {
         this.$message.info('请先填写评论哦')
       }
@@ -65,7 +68,7 @@ export default {
 </script>
 
 <style lang="less">
-.box{
+.box {
   margin-bottom: 20px;
 }
 .textarea {

@@ -75,7 +75,10 @@ router.beforeEach(async (to, from, next) => {
     //   //当未登录的时候，去而没有去成的信息，存储于地址栏中【路由】
     //   next()
     // }
-    Vue.prototype.$message.info('没有登录，请先登录哦！')
+    
+    if (process.env.NODE_ENV === 'development') { 
+      Vue.prototype.$message.info('没有登录，请先登录哦！')
+    }
     next()
   }
   if (to.path === 'toplist') {
